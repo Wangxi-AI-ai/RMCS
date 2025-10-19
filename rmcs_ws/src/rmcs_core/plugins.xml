@@ -98,4 +98,11 @@
   <class type="rmcs_core::referee::app::ui::Hero" base_class_type="rmcs_executor::Component">
     <description>Test plugin.</description>
   </class>
+  <!-- 任务组件 -->
+  <class type="rmcs_core::controller::task_components::SinCosGenerator" base_class_type="rmcs_executor::Component">
+    <description>Generates sin(ωt) and cos(ωt) values</description>
+  </class>
+  <class type="rmcs_core::controller::task_components::SinCosAdder" base_class_type="rmcs_executor::Component">
+    <description>Adds sin(ωt) and cos(ωt) values</description>
+  </class>
 </library>

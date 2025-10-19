@@ -1,0 +1,18 @@
+rmcs_executor:
+  ros__parameters:
+    update_rate: 1000.0
+    components:
+      - rmcs_core::controller::task_components::SinCosGenerator -> sin_cos_generator
+      - rmcs_core::controller::task_components::SinCosAdder -> sin_cos_adder
+      - rmcs_core::broadcaster::ValueBroadcaster -> value_broadcaster
+
+sin_cos_generator:
+  ros__parameters:
+    omega: 1.0
+
+value_broadcaster:
+  ros__parameters:
+    forward_list:
+      - "/task/sin_output"
+      - "/task/cos_output"
+      - "/task/sum_output"
